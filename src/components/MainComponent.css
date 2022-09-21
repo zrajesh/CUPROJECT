@@ -1,0 +1,87 @@
+.main-component {
+    padding: 0 20px;
+    margin-top: 40px;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.text-hero {
+    font-family: 'Barlow';
+    font-style: italic;
+    width: 700px;
+}
+
+.text-hero-title {
+    font-weight: 900;
+    font-size: 96px;
+}
+
+.text-hero-desc {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.carousel-hero {
+    width: 480px;
+}
+
+.carousel .slide img {
+    height: 300px;
+}
+
+.carousel .thumbs {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel .thumb {
+    height: 50px;
+}
+
+.carousel .slide .legend {
+    display: none;
+}
+
+.cta-section {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.cta-button .cta-button-link {
+    background: #EAEF00;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Euclid Circular A';
+    font-style: normal;
+    color: #000;
+    cursor: pointer;
+}
+
+.cta-desc {
+    font-size: 18px;
+    font-family: 'Inter';
+    font-style: 'normal';
+}
+
+.cta-brand {
+    margin-left: 3px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.cta-brand-yellow {
+    color: #EAEF00;
+}
+

@@ -1,0 +1,129 @@
+.student-feed {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+    background: #f1f6fe;
+    min-height: 100vh;
+}
+
+.studentfeed-head {
+    font-weight: 400;
+    font-size: 36px;
+    color: #000;
+    text-align: center;
+}
+
+.student-feed-search {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.student-feed-search input {
+    width: 100%;
+}
+
+.student-profile {
+    text-align: center;
+}
+
+.student-search {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.student-filters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.student-feed-contents {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.student-porifle-details {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+    border: 1px solid rgba(34,85,133,.071);
+    border-radius: 0.5rem;
+    box-shadow: 0 9px 13px rgb(45 148 243 / 7%);
+    height: 40vh;
+}
+
+.profileHead {
+    font-weight: bold;
+}
+
+.student-porifle-details div {
+    display: flex;
+    gap: 20px;
+}
+
+.student-porifle-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+
+.student-profile-card {
+    display: flex;
+    gap: 30px;
+    background-color: #fff;
+    border: 1px solid rgba(34,85,133,.071);
+    border-radius: 0.5rem;
+    box-shadow: 0 9px 13px rgb(45 148 243 / 7%);
+    padding: 20px 25px;
+}
+
+.student-auth {
+    background-color: #00baf2;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.student-auth-no {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.student-profile-card-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-desc-info {
+    margin-top: 5px;
+}
+
+.student-desc-info div {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.badge {
+    color: #ef6c00;
+    font-weight: bold;
+}

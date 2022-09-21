@@ -1,0 +1,123 @@
+.student-login-page {
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+.success-message, .error-message {
+    margin: 0 40px
+}
+
+.student-login-page-contents {
+    min-height: 90vh;
+    display: flex;
+    gap: 40px;
+}
+
+.student-login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 580px;
+}
+
+.student-login-content h3 {
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.student-login-content p {
+    font-size: 18px;
+}
+
+.log-img {
+    height: 400px;
+}
+
+.student-login-forms {
+    background-color: #fff;
+    border: 1px solid rgba(34,85,133,.071);
+    border-radius: 0.5rem;
+    box-shadow: 0 9px 13px rgb(45 148 243 / 7%);
+    height: 420px;
+    width: 550px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-login-head {
+    color: #000;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.input-form-group {
+    margin: 10px;
+}
+
+.input-form-group label {
+    color: #000;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-form-group input {
+    height: 30px;
+    width: 390px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    outline: none;
+}
+
+.login-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-btn-wrap {
+    display: flex;
+    gap: 10px;
+    color: #000;
+    font-weight: bold;
+}
+.sign-up-link {
+    margin-top: 10px;
+}
+
+.login-panel {
+    background: #fff;
+    border: 1px solid #ebebeb;
+    width: 120px;
+    position: relative;
+    z-index: 3;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px 0px #e2e2e2;
+    box-shadow: 1px 1px 1px 0px #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+    display: none;
+    padding: 0 10px;
+}
+
+.login-panel.active {
+    display: block;
+}
+
+.login-panel div {
+    padding: 10px 0;
+}
+
+.login-panel-link {
+    text-decoration: none;
+    color: #000;
+}

@@ -1,0 +1,50 @@
+.navbar {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Euclid Circular A';
+    background-color: #1E1E1E;
+    color: #fff;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.brand {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.brand-yellow {
+    color: #EAEF00;
+}
+
+.nav-links {
+    margin: 10px 0;
+}
+
+.nav-link {
+    font-size: 20px;
+    margin: 0 8px;
+}
+
+.nav-auth {
+    margin-top: 8px;
+}
+
+.nav-link-auth {
+    font-size: 20px;
+    margin: 0 8px;
+    background-color: #EAEF00;
+    color: #000;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-weight: 600;
+}
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 920px) {
+    .nav-links {
+        display: none;
+    }
+}

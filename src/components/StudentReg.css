@@ -1,0 +1,51 @@
+.student-reg {
+    background: #fce2e2;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.student-reg-head {
+    display: flex;
+    justify-content: space-between;
+    width: 480px;
+}
+
+.student-reg-head h3 {
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+}
+
+.btn-primary {
+    font-weight: 400;
+    font-size: 14px;
+    background: #00baf2;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    outline: none;
+    border-style: none;
+    cursor: pointer;
+}
+
+.hr-line {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.student-reg-photo {
+    margin: 20px 0;
+}
+
+.student-reg-block {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 10px;
+}
+
+.student-reg-block label {
+    display: block;
+}
+
