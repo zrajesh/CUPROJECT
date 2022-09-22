@@ -29,6 +29,20 @@ const StdentFeed = () => {
     const user = JSON.parse(localStorage.getItem("jwt")).user.user;
 
     const aluminiUrl = "http://localhost:8000/api/aluminis";
+
+    const clearFilter = () => {
+        window.location.reload();
+    }
+
+    const fitlerAluminis =   async (url, id) => {
+        let data = document.querySelector(`#${id}`).value;
+        console.log(data);
+        const response = await axios
+            .get(`${aluminiUrl}/${url}/${data}`)
+            .catch(err => console.log("ERROR: ", err))  
+        setAluminis(response.data);
+    }
+
     const fetchStudents =   async () => {
         const response = await axios
             .get(aluminiUrl)
@@ -58,34 +72,32 @@ const StdentFeed = () => {
                     </div>
                     <div className="student-filters">
                         <div>
-                        <select name="" id="">
-                            <option value="">Year</option>
-                            <option value="">2022</option>
-                            <option value="">2021</option>
-                            <option value="">2020</option>
+                        <select id="alumAuth" onChange={() => fitlerAluminis("verify", "alumAuth")} name="">
+                            <option value="">Alumini Authenticate</option>
+                            <option value="true">Verified</option>
+                            <option value="false">Not Verified</option>
                         </select>
                         </div>
 
                         <div>
-                        <select name="" id="">
+                        <select id="genderSelect" onChange={() => fitlerAluminis("gen", "genderSelect")} name="">
                             <option value="">Gender</option>
-                            <option value="">Male</option>
-                            <option value="">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
                         </select>
                         </div>
 
                         <div>
-                        <select name="" id="">
+                        <select id="domainSelect" onChange={() => fitlerAluminis("work", "domainSelect")} name="">
                             <option value="">Work Domain</option>
-                            <option value="">Web Development</option>
-                            <option value="">Android Development</option>
-                            <option value="">Machine Learning</option>
-                            <option value="">Cloud and Devops</option>
+                            <option value="Web Developer">Web Developer</option>
+                            <option value="Mobile Developer">Mobile Developer</option>                   
+                            <option value="Cloud">Cloud</option>
                         </select>
                         </div>
 
                         <div>
-                            <button className="btn-primary">Clear</button>
+                            <button onClick={clearFilter} className="btn-primary">Clear</button>
                         </div>
                     </div>
                 </div>

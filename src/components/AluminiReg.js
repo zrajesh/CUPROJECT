@@ -169,8 +169,12 @@ const AluminiReg = () => {
                     <input onChange={handleChange("regNo")} value={regNo} type="text" id="reg" placeholder="" />
                 </div>
                 <div>
-                    <label htmlFor="domain">WORK DOMAIN</label>
-                    <input onChange={handleChange("domain")} value={domain} type="text" id="domain" placeholder="" />
+                    <select onChange={handleChange("domain")} id="domain" name="">
+                        <option value="">WORK DOMAIN</option>
+                        <option value="Web Developer">Web Developer</option>
+                        <option value="Mobile Developer">Mobile Developer</option>                   
+                        <option value="Cloud">Cloud</option>
+                    </select>
                 </div>
                 <div>
                     <label htmlFor="exp">YEAR OF EXP</label>
