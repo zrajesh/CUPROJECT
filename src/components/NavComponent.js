@@ -17,9 +17,9 @@ const NavComponent = () => {
             </div>
             <div className="nav-links">
                 <Link to="#" className="free-link nav-link">NEWS</Link>
-                <Link to="#" className="free-link nav-link">EVENTS</Link>
-                <Link to="#" className="free-link nav-link">ABOUT US</Link>
-                <Link to="#" className="free-link nav-link">CONTACT US</Link>
+                <Link to="/events" className="free-link nav-link">EVENTS</Link>
+                <Link to="/aboutus" className="free-link nav-link">ABOUT US</Link>
+                <Link to="/contactus" className="free-link nav-link">CONTACT US</Link>
             </div>
             <div className="nav-auth">
                 <Link to="#" onClick={toggleLogin} className="free-link nav-link-auth">Login</Link>

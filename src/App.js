@@ -10,6 +10,9 @@ import MsdeReg from "./components/MsdeReg";
 import MsdLogin from "./components/MsdLogin";
 import StdentFeed from "./components/StdentFeed";
 import StudentReg from "./components/StudentReg";
+import About from "./pages/About";
+import ContactUs from "./pages/ContactUs";
+import Events from "./pages/Events";
 import Home from "./pages/Home";
 
 function App() {
@@ -18,6 +21,9 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/aboutus" element={<About />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/events" element={<Events />} />
         <Route path="/register/student" element={<StudentReg />} />
         <Route path="/register/msde" element={<MsdeReg />} />
         <Route path="/register/alumini" element={<AluminiReg />} />
