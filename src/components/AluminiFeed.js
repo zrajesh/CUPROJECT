@@ -13,6 +13,7 @@ const AluminiFeed = () => {
             surname: "",
             dob: "",
             gender: "",
+            company: "",
             state: "",
             city: "",
             email: "",
@@ -39,6 +40,26 @@ const AluminiFeed = () => {
             .get(`${aluminiUrl}/${url}/${data}`)
             .catch(err => console.log("ERROR: ", err))  
         setAluminis(response.data);
+    }
+
+    const fitlerMsde =   async (url, id) => {
+        let data = document.querySelector(`#${id}`).value;
+        let msdeRegNo = JSON.parse(localStorage.getItem("jwt")).alumini.alumini.regNo;
+        console.log(data);
+        if (data === "true") {
+            console.log("True Entered");
+            const response = await axios
+            .get(`${aluminiUrl}`)
+            .catch(err => console.log("ERROR: ", err))   
+        setAluminis(response.data.filter((data) => data.regNo === msdeRegNo))
+        return;
+        }
+        if (data === "false") {
+            const response = await axios
+            .get(`${aluminiUrl}`)
+            .catch(err => console.log("ERROR: ", err))  
+        setAluminis(response.data.filter((data) => data.regNo !== msdeRegNo))
+        }
     }
 
     const fetchStudents =   async () => {
@@ -99,6 +120,45 @@ const AluminiFeed = () => {
                     </select>
                     </div>
 
+                    <div>
+                    <select id="city" onChange={() => fitlerAluminis("cit", "city")} name="">
+                        <option value="">CITY</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Gurgaon">Gurgaon</option>
+                        <option value="Noida">Noida</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Kolkota">Kolkota</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Jaipur">Jaipur</option>
+                    </select>
+                </div>
+
+                <div>
+                    <select id="company" onChange={() => fitlerAluminis("com", "company")} name="">
+                        <option value="">COMPANY</option>
+                        <option value="Microsoft">Microsoft</option>
+                        <option value="Google">Google</option>                   
+                        <option value="Amazon">Amazon</option>
+                        <option value="Meta">Meta</option>
+                        <option value="Netflix">Netflix</option>
+                        <option value="Accenture">Accenture</option>
+                        <option value="Tcs">Tcs</option>
+                        <option value="Capgemini">Capgemini</option>
+                        <option value="Cognizant">Cognizant</option>
+                        <option value="Infosys">Infosys</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <select id="msdeSelect" onChange={() => fitlerMsde("msde", "msdeSelect")} name="">
+                        <option value="">MSDE</option>
+                        <option value="true">Your Msde</option>
+                        <option value="false">others</option>
+                    </select>
+                </div>
+
                         <div>
                             <button onClick={clearFilter} className="btn-primary">Clear</button>
                         </div>
@@ -115,6 +175,10 @@ const AluminiFeed = () => {
                     <div>
                     <p className="profileHead">Domain: </p>
                     <p>{alumini.domain}</p>
+                    </div>
+                    <div>
+                    <p className="profileHead">Company: </p>
+                    <p>{alumini.company}</p>
                     </div>
                     <div>
                     <p className="profileHead">Institute: </p>
@@ -148,6 +212,7 @@ const AluminiFeed = () => {
                         <div><p className="badge">STATE:</p><p>{alumini.state}</p></div>
                         <div><p className="badge">EMAIL:</p><p>{alumini.email}</p></div>
                         <div><p className="badge">WORK DOMAIN:</p><p>{alumini.domain}</p></div>
+                        <div><p className="badge">COMPANY:</p><p>{alumini.company}</p></div>
                         <div><p className="badge">EXPERIENCE:</p><p>{alumini.exp}</p></div>
                         </div>
                         </div>

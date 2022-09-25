@@ -13,6 +13,7 @@ const MsdeFeed = () => {
             dob: "",
             gender: "",
             state: "",
+            company: "",
             city: "",
             email: "",
             mobile: "",
@@ -111,6 +112,38 @@ const MsdeFeed = () => {
                         </div>
 
                         <div>
+                    <select id="city" onChange={() => fitlerAluminis("cit", "city")} name="">
+                        <option value="">CITY</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Gurgaon">Gurgaon</option>
+                        <option value="Noida">Noida</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Kolkota">Kolkota</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Jaipur">Jaipur</option>
+                    </select>
+                </div>
+
+                <div>
+                    <select id="company" onChange={() => fitlerAluminis("com", "company")} name="">
+                        <option value="">COMPANY</option>
+                        <option value="Microsoft">Microsoft</option>
+                        <option value="Google">Google</option>                   
+                        <option value="Amazon">Amazon</option>
+                        <option value="Meta">Meta</option>
+                        <option value="Netflix">Netflix</option>
+                        <option value="Accenture">Accenture</option>
+                        <option value="Tcs">Tcs</option>
+                        <option value="Capgemini">Capgemini</option>
+                        <option value="Cognizant">Cognizant</option>
+                        <option value="Infosys">Infosys</option>
+                    </select>
+                </div>
+                
+
+                        <div>
                             <button onClick={clearFilter} className="btn-primary">Clear</button>
                         </div>
                     </div>
@@ -140,6 +173,7 @@ const MsdeFeed = () => {
                         <div><p className="badge">STATE:</p><p>{alumini.state}</p></div>
                         <div><p className="badge">EMAIL:</p><p>{alumini.email}</p></div>
                         <div><p className="badge">WORK DOMAIN:</p><p>{alumini.domain}</p></div>
+                        <div><p className="badge">COMPANY:</p><p>{alumini.company}</p></div>
                         <div><p className="badge">EXPERIENCE:</p><p>{alumini.exp}</p></div>
                         </div>
                         </div>

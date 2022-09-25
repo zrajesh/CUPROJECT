@@ -10,6 +10,7 @@ const AluminiReg = () => {
         surname: "",
         dob: "",
         gender: "",
+        company: "",
         state: "",
         city: "",
         mobile: "",
@@ -27,7 +28,7 @@ const AluminiReg = () => {
 
     const {
         name,surname,dob,gender,state,city,mobile,email,linkedinId,
-        institute,regNo,password,domain,exp,error,success
+        institute,regNo,password,domain,company,exp,error,success
     } = values;
 
     const handleChange = name => event => {
@@ -43,9 +44,10 @@ const AluminiReg = () => {
         })
         Signup({
             name,surname,dob,gender,state,city,mobile,email,linkedinId,
-            institute,domain,regNo,exp,password
+            institute,domain,regNo,exp,password,company
         }, "signup/alumini")
         .then(data => {
+            console.log(data)
             if(data?.error) {
                 setValues({
                     ...values, error: data.error, success: false
@@ -141,8 +143,18 @@ const AluminiReg = () => {
                     <input onChange={handleChange("state")} value={state} type="text" id="state" placeholder="" />
                 </div>
                 <div>
-                    <label htmlFor="city">CITY</label>
-                    <input onChange={handleChange("city")} value={city} type="text" id="city" placeholder="" />
+                    <select onChange={handleChange("city")} id="city" name="">
+                        <option value="">CITY</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Gurgaon">Gurgaon</option>
+                        <option value="Noida">Noida</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Kolkota">Kolkota</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Jaipur">Jaipur</option>
+                    </select>
                 </div>
             </div>
             <hr className="hr-line" />
@@ -174,6 +186,21 @@ const AluminiReg = () => {
                         <option value="Web Developer">Web Developer</option>
                         <option value="Mobile Developer">Mobile Developer</option>                   
                         <option value="Cloud">Cloud</option>
+                    </select>
+                </div>
+                <div>
+                    <select onChange={handleChange("company")} id="company" name="">
+                        <option value="">COMPANY</option>
+                        <option value="Microsoft">Microsoft</option>
+                        <option value="Google">Google</option>                   
+                        <option value="Amazon">Amazon</option>
+                        <option value="Meta">Meta</option>
+                        <option value="Netflix">Netflix</option>
+                        <option value="Accenture">Accenture</option>
+                        <option value="Tcs">Tcs</option>
+                        <option value="Capgemini">Capgemini</option>
+                        <option value="Cognizant">Cognizant</option>
+                        <option value="Infosys">Infosys</option>
                     </select>
                 </div>
                 <div>
